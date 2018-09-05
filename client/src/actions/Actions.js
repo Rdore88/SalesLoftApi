@@ -6,3 +6,10 @@ export function receiveMe(me) {
     me
   }
 }
+
+export function setAllPeople(allPeople) {
+  return {
+    type: actions.SET_ALL_PEOPLE,
+    payload: allPeople
+  }
+}
