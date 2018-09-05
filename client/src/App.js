@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import ConnectedAllPersonList from './containers/ConnectedAllPersonList'
+import ConnectedAllPersonList from './containers/allPeopleList/ConnectedAllPersonList'
 
 const App = ({ store }) => (
   <Provider store={store}>

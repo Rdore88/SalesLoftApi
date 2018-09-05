@@ -1,0 +1,7 @@
+.list-items {
+  border-color: black;
+  padding: 1em;
+  box-shadow: 5px 5px 5px #888888;
+  text-align: center;
+  flex-grow: 1;
+}

@@ -1,0 +1,9 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+
+.list-header, .loading-header{
+  text-align: center;
+}
