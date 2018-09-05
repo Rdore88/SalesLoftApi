@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ListItem from '../../components/listItem/ListItem';
-import './allPersonList.css'
+import './allPersonList.css';
+import LetterFrequencyButton from '../../components/letterFrequencyButton/LetterFrequencyButton';
 
 class AllPersonList extends Component {
   render() {
@@ -14,6 +15,7 @@ class AllPersonList extends Component {
       return (
         <div>
           <h1 className="list-header">List of all People</h1>
+          <LetterFrequencyButton peopleArray={this.props.allPeople}/>
           <div className="list">
             {listOfPeople}
           </div>
