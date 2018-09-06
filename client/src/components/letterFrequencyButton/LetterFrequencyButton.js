@@ -4,6 +4,9 @@ class LetterFrequencyButton extends Component {
   constructor(props){
     super(props);
       this.findLetterFrequencies = this.findLetterFrequencies.bind(this);
+      this.state = {
+        notWords: [".", "_"]
+      }
   }
 
   //this function shaves off the @... part of the email
@@ -21,8 +24,17 @@ class LetterFrequencyButton extends Component {
   }
 
   findLetterFrequencies(event){
-    let emailArray = this.getAllEmails()
-    console.log(emailArray);
+    let output = {}
+    let allCharacters = this.getAllEmails().join('')
+
+    for (var i = 0; i < allCharacters.length; i++) {
+      if (output.hasOwnProperty(allCharacters[i])) {
+        output[allCharacters[i]] += 1
+      } else {
+        this.state.notWords.includes(allCharacters[i]) ? null : output[allCharacters[i]] = 1
+      }
+    }
+    return output;
   }
 
   render() {
