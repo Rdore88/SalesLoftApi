@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ListItem from '../../components/listItem/ListItem';
 import './allPersonList.css';
+import FrequencyList from '../../components/frequencyList/FrequencyList'
 
 class AllPersonList extends Component {
   constructor(props){
     super(props);
       this.findLetterFrequencies = this.findLetterFrequencies.bind(this);
+      this.closeList = this.closeList.bind(this);
       this.state = {
-        notWords: [".", "_"]
+        notWords: [".", "_"],
+        list: {
+          show: false,
+          frequenciesObject: null
+        }
       }
   }
 
@@ -36,8 +42,21 @@ class AllPersonList extends Component {
         this.state.notWords.includes(allCharacters[i]) ? null : output[allCharacters[i]] = 1
       }
     }
-    console.log(output);
-    return output;
+    this.setState({
+      list: {
+        show: true,
+        frequenciesObject: output
+      }
+    })
+  }
+
+  closeList(){
+    this.setState({
+      list: {
+        show: false,
+        frequenciesObject: null
+      }
+    })
   }
 
   render() {
@@ -51,6 +70,7 @@ class AllPersonList extends Component {
         <div>
           <h1 className="list-header">List of all People</h1>
           <button onClick={this.findLetterFrequencies}>Letter Frequencies</button>
+          <FrequencyList data={this.state.list} closeList={this.closeList}/>
           <div className="list">
             {listOfPeople}
           </div>
