@@ -46,3 +46,6 @@ bundle exec foreman start
 ```
 8.) Navigate to localhost:5000
 
+### Running Tests
+
+Run the testing suite by being at the root level of the project and run `rspec`
