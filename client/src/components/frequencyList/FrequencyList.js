@@ -15,7 +15,7 @@ class FrequencyModal extends Component{
       })
       return (
         <div>
-          <button onClick={this.props.closeList}>Close List</button>
+          <button id="close-list" onClick={this.props.closeList}>Close List</button>
           <table>
             <thead>
             <tr>

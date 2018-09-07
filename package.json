@@ -2,7 +2,8 @@
   "name": "SalesLoftIntegration",
   "private": true,
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:test": "cypress run"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -14,6 +15,7 @@
     "dotenv": "^4.0.0",
     "html-webpack-plugin": "^2.30.1",
     "immutability-helper": "^2.7.1",
+    "jquery": "^3.3.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.0-beta.14",

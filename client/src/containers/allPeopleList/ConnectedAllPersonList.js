@@ -69,7 +69,7 @@ class AllPersonList extends Component {
       return (
         <div>
           <h1 className="list-header">List of all People</h1>
-          <button onClick={this.findLetterFrequencies}>Letter Frequencies</button>
+          <button id="frequency-button" onClick={this.findLetterFrequencies}>Letter Frequencies</button>
           <FrequencyList data={this.state.list} closeList={this.closeList}/>
           <div className="list">
             {listOfPeople}
